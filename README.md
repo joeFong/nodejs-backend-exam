@@ -6,7 +6,8 @@
 3. the game model is in the models directory. 
 4. .env file contains environment constants needed for DB connection. I did not add this to gitignore so you have the config.  
 5. I have allowed all connections for mongodb but if connection is not working I can add yours. 
-6. This was a really fun exercise. Thank you. 
+6. To test, from ./api run npx test after npm install 
+7. This was a really fun exercise. Thank you. 
 
 ## Goal
 Create a `RESTful` backend application for a Tic Tac Toe game in Node.js.
