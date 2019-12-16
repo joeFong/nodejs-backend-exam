@@ -11,11 +11,15 @@ const port = 4000;
 app.use(cors());
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
-/** IMPLEMENT MIDDLEWARE(S) BELOW */
 
 /** IMPLEMENT DATABASE BELOW */
 const mongoDB = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`;
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+const dbConfig = { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
+};
+mongoose.connect(mongoDB, dbConfig);
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
