@@ -5,7 +5,7 @@
 2. gameController is responsible for CRUD functionality and more. For the purpose of this exercise it does only what is asked, which is getting game history and analysis, and creating a game. 
 3. the game model is in the models directory. 
 4. .env file contains environment constants needed for DB connection. I did not add this to gitignore so you have the config.  
-5. I have allowed all connections for mongodb but if connection is not working I can add yours. 
+5. I have decided to use MongoDB. I have allowed all connections for mongodb but if connection is not working I can make a hard whitelist for your IP. 
 6. To test, from ./api run npm test after npm install 
 7. This was a really fun exercise. Thank you. 
 
