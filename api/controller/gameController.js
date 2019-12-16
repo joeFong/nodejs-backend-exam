@@ -36,25 +36,7 @@ gameHistory = async () => {
 createGame = async (payload) => {
     const { squares, winner } = payload;
 
-    let game, response, errResponse = {error: []}; 
-
-    if(!squares) {
-        errResponse.error.push({
-            'status': 'missing_squares',
-            'message': 'Squares are required'
-        });
-    }
-
-    if(!winner) {
-        errResponse.error.push({
-            'status': 'missing_winner',
-            'message': 'Winner is required'
-        });
-    }
-
-    if(errResponse && errResponse.length) {
-        return errResponse;
-    }
+    let game, response; 
 
     game = new Game({
         _id: new mongoose.Types.ObjectId(),
