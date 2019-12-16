@@ -15,7 +15,6 @@ import { formatDate } from '../common/format'
 /** Statistics ================================================================================== */
 export default function Stat (props) {
   const { history, winRates } = props
-
   return <>
     {
       (() => {
